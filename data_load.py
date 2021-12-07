@@ -3,7 +3,7 @@ driver=GraphDatabase.driver(uri="bolt://localhost:7687",auth=("neo4j","Rambo@123
 session=driver.session()
 
 q1="""
-call apoc.periodic.iterate('call apoc.load.csv("/Users/roni/Documents/GitHub/NEO4J_DASHBOARD/results.csv")
+call apoc.periodic.iterate('call apoc.load.csv("/Users/ronidas/Documents/GitHub/NEO4J_DASHBOARD/results.csv")
 yield map as row return row
 ','
 merge(c:Country{Name:row.country})
